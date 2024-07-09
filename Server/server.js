@@ -18,7 +18,7 @@ dotenv.config();
 const PORT = process.env.PORT;
 
 //Fuction to access the remote DB
-const DB_NAME = 'crite_tile_schema';  //CHANGE DB NAME PER PROJECT
+const DB_NAME = 'CritesCustomTile';  //CHANGE DB NAME PER PROJECT
 dbConnect(DB_NAME);
 
 

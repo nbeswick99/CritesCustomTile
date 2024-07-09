@@ -1,6 +1,8 @@
 import { Router } from "express";
-import {createClient, getAllClients, getOneClient, updateOneClient, deleteOneClient } from "../controllers/clients.controller.js";
+import clientControllers from "../controllers/clients.controllers.js";
+
 const router = Router();
+const {createClient, getAllClients, getOneClient, updateOneClient, deleteOneClient} = clientControllers
 
 router.route("/clients")
     .post(createClient)

@@ -15,8 +15,8 @@ const ClientSchema = new Schema(
             required: [true, "Email Name is required!"],
         },
         Number: {
-            type: Int32Array,
-            required: [true, "Phone Name is required!"],
+            type: Array,
+            required: [true, "Phone Number is required!"],
         }
 
 
