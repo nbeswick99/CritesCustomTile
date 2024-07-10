@@ -1,0 +1,52 @@
+.navbar {
+  display: flex;
+  background-color: #4D7C8A;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  min-height: 6vh;
+  position: sticky;
+}
+
+.dropdown {
+  overflow:hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dropdown .dropbtn {
+  font-size: 20px;
+  border: none;
+  outline: none;
+  color: black;
+  background-color: #4D7C8A;
+}
+
+.dropdown-content {
+  background-color: #4D7C8A;
+  display: none;
+  position: absolute;
+  margin-top:3vh;
+  min-width: 2em;
+  flex-direction: column;
+  align-items:center;
+  z-index: 1;
+}
+
+a {
+  font-size: 20px;
+  color: black;
+  text-decoration: none;
+  margin:8px;
+  padding: 0px 2px;
+}
+
+a:hover, .dropdown:hover .dropbtn {
+  border-bottom: 4px black solid;
+  transition: 200ms;
+}
+
+.dropdown:hover .dropdown-content {
+  display:flex;
+}
