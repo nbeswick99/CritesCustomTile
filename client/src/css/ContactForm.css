@@ -1,0 +1,21 @@
+.contact-form-container{
+  background-color: #ff7f11;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow:hidden;
+  padding:1em;
+  width: 22em;
+  border-radius:10%;
+}
+.form{
+  background-color: #F57200;
+  border-radius:10%;
+}
+.input-container{
+  display:flex;
+  justify-content: space-between;
+  margin:1em;
+  padding: 1em;
+  gap: 2em;
+}

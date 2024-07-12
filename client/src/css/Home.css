@@ -1,0 +1,32 @@
+.hero-container{
+  background-image: url(https://scontent.fosu2-2.fna.fbcdn.net/v/t39.30808-6/239844746_111625384557842_8306683179280402449_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=Lin-gZsq1LYQ7kNvgEmpiMx&_nc_ht=scontent.fosu2-2.fna&oh=00_AYBW5C7MnQ0Qe9rv9-2kB-fjQhydOJCW79LTmgcLKC2bOA&oe=669795EC);
+  background-size: 100%;;
+  background-repeat: no-repeat;
+  background-position: center;
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  padding: 0 5vw;
+  max-width: 100vw;
+  min-height:40em;
+
+}
+.hero-text-container{
+  max-width: 40em;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+.hero-text{
+  text-align: center;
+}
+h2.hero-text{
+  font-size: 3.4em;
+  font-weight: 600;
+}
+p.hero-text{
+  max-width: 30em;
+  font-size: 1.75em
+}
