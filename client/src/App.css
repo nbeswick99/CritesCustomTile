@@ -1,5 +1,9 @@
 #root {
   max-width: 100vw;
 }
-
+.bigheader{
+  position: sticky;
+  top:0px;
+  z-index:10;
+}
 

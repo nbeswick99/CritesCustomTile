@@ -5,7 +5,7 @@
   align-items: center;
   gap: 2em;
   min-height: 6vh;
-  position: sticky;
+  box-shadow: 0px 2px 2px black;
 }
 
 .dropdown {

@@ -3,6 +3,7 @@
   background-size: 100%;;
   background-repeat: no-repeat;
   background-position: center;
+  background-color: #4D7C8A;
   
   display: flex;
   justify-content: space-between;
@@ -11,6 +12,7 @@
   padding: 0 5vw;
   max-width: 100vw;
   min-height:40em;
+  margin-bottom: 1em;
 
 }
 .hero-text-container{
@@ -29,4 +31,16 @@ h2.hero-text{
 p.hero-text{
   max-width: 30em;
   font-size: 1.75em
+}
+.learn-more{
+  background-color:#4D7C8A;
+  transition: 100ms;
+  border-radius: .5em;
+  border: none;
+  font-size: 1.5em;
+  padding: .25em;
+}
+.learn-more:hover{
+  background-color: #ff7f11;
+  transition: 100ms;
 }

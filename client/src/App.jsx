@@ -7,6 +7,10 @@ import Header from './components/Header.jsx'
 // Client View imports
 import Home from './views/Home.jsx'
 import Backsplash from './views/Backsplash.jsx'
+import Shower from './views/Shower.jsx'
+import TileFloor from './views/TileFloor.jsx'
+import VinylFloor from './views/VinylFloor.jsx'
+import HardwoodFloor from './views/HardwoodFloor.jsx'
 
 //Admin View imports 
 
@@ -19,12 +23,18 @@ function App() {
 
   return (
     <main>
-        <Header />
-        <Navbar />
+        <div className='bigheader'>
+          <Header />
+          <Navbar />
+        </div>
         <Routes>
           {/* Client Side Routes */}
           <Route path='/' element={<Home/>}/>
-          <Route past='/Backsplash' element={<Backsplash/>}/>
+          <Route path='/Backsplash' element={<Backsplash/>}/>
+          <Route path='/Shower' element={<Shower/>}/>
+          <Route path='/TileFloor' element={<TileFloor/>}/>
+          <Route path='/VinylPlankFloor' element={<VinylFloor/>}/>
+          <Route path='/HardwoodFloor' element={<HardwoodFloor/>}/>
 
           {/* Admin Routes */}
           {/* <Route path='/clients/:id' element={<ShowOne/>} />
