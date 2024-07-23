@@ -5,7 +5,7 @@
   align-items: center;
   overflow:hidden;
   padding:1em;
-  width: 22em;
+  width: 25vw;
   border-radius:10%;
 }
 .form{
@@ -18,4 +18,9 @@
   margin:1em;
   padding: 1em;
   gap: 2em;
+}
+
+.number-container{
+  display:flex;
+  gap:.5em;
 }

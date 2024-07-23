@@ -6,7 +6,6 @@ import ContactForm from '../components/ContactForm'
 import '../css/Service.css'
 const Backsplash = () => {
   return (
-
     <div>
       {/* Banner image */}
       <img className='banner' src="https://scontent.fosu2-1.fna.fbcdn.net/v/t39.30808-6/348432172_622973799746102_718479849634858375_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_ohc=gB59-PLqg2oQ7kNvgFezqwC&_nc_ht=scontent.fosu2-1.fna&oh=00_AYCUJR9m3pNz_9taqItzJr1AjiexBUKJ_YhIQsH8AS8RZQ&oe=669A530E" alt="Backsplash" />

@@ -3,6 +3,7 @@
   justify-content: space-around;
   align-items: center;
   padding: 0 3vw;
+  margin-top: 2em;
 }
 .service-img{
   max-width: 40vw;
@@ -33,7 +34,7 @@ p.service-text{
 .banner{
   height: 30vh;
   min-width: 100%;
-  object-fit: cover;
+  object-fit:cover;
   margin-bottom: 10px;
 }
 .image-gallery-container {
@@ -51,4 +52,12 @@ p.service-text{
   .image-gallery-container {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
+}
+
+/* Shower page*/
+#shower-banner {
+  object-position: 50% 20%;
+}
+#tile-floor-banner{
+  object-position: 50% 35%
 }

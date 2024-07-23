@@ -16,21 +16,37 @@ const ContactForm = () => {
   const Navigate = useNavigate();
 
   const changeHandler = (e) => {
-    setContact((prevState) => ({...prevState,
-      [e.target.name]: e.target.value
-      }))
-    };
+    if (e.target.name === "number"){
+      console.log(e.target)
+      if (e.target.value.length() < 3) {
+        setContact((prevState) => ({...prevState,
+          [e.target.name]: e.target.value
+          }));
+      } else {
+        let dashedNumber = [e.target.value.slice(0,2), "-", e.target.value.slice(2)].join()
+        setContact((prevState) => ({...prevState,
+          [e.target.name]: dashedNumber
+        }));
+      }
+    } else {
+      setContact((prevState) => ({...prevState,
+        [e.target.name]: e.target.value
+      }));
+    }
+  };
 
   const submitHandler = (e) => {
     e.preventDefault();
-    axios.post("http://localhost:8000/api/listings", contact)
+    const newContact = contact
+    newContact.number = "+1812" + contact.number
+    axios.post("http://localhost:8000/api/listings", newContact)
     .then((res) => {
       console.log(res.data)
       setContact({
         firstName: "", 
         lastName: "",
         email: "",
-        number: []
+        number: ""
         })
       Navigate("/");
     })
@@ -47,19 +63,22 @@ const ContactForm = () => {
       <form onSubmit={e => submitHandler(e)} className='form'>
         <div className='input-container'>
           <label htmlFor="firstName">First Name</label>
-          <input type="text" id="firstName" name="firstName" value={contact.firstName} onChange ={e => changeHandler(e)}/>
+          <input placeholder='First Name'type="text" id="firstName" name="firstName" value={contact.firstName} onChange ={e => changeHandler(e)}/>
         </div>
         <div className='input-container'>
           <label htmlFor="lastName">Last Name</label>
-          <input type="text" id="lastName" name="lastName" value={contact.lastName} onChange ={e => changeHandler(e)}/>
+          <input placeholder='Last Name'type="text" id="lastName" name="lastName" value={contact.lastName} onChange ={e => changeHandler(e)}/>
         </div>
         <div className='input-container'>
           <label htmlFor="email">Email</label>
-          <input type="text" id="email" name="email" value={contact.email} onChange ={e => changeHandler(e)}/>
+          <input placeholder='example@email.com'type="text" id="email" name="email" value={contact.email} onChange ={e => changeHandler(e)}/>
         </div>
         <div className='input-container'>
           <label htmlFor="number">Number</label>
-          <input type="text" id="number" name="number" value={contact.number} onChange ={e => changeHandler(e)}/>
+          <div className='number-container'>
+            <span>+1 (812) </span>
+            <input placeholder=' ###-####'type="text" id="number" name="number" value={contact.number} onChange ={e => changeHandler(e)}/>
+          </div>
         </div>
       </form>
     </div>

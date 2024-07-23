@@ -2,19 +2,19 @@ import {model, Schema} from 'mongoose';
 
 const ClientSchema = new Schema(
     {
-        FirstName: {
+        firstName: {
             type: String,
             required: [true, "First Name is required!"],
         },
-        LastName: {
+        lastName: {
             type: String,
             required: [true, "Last Name is required!"],
         },
-        Email: {
+        email: {
             type: String,
             required: [true, "Email Name is required!"],
         },
-        Number: {
+        number: {
             type: String,
             required: [true, "Phone Number is required!"],
         }
