@@ -1,11 +1,17 @@
 import React from 'react'
 //Component imports
+import Navbar from '../components/Navbar.jsx'
+import Header from '../components/Header.jsx'
 import ContactForm from '../components/ContactForm'
 //css imports
 import '../css/Service.css'
 const TileFloor = () => {
   return (
     <div>
+      <div className='bigheader'>
+        <Header />
+        <Navbar />
+      </div>
       {/* Banner image */}
       <img className='banner' id='tile-floor-banner'src="https://scontent.fosu2-2.fna.fbcdn.net/v/t39.30808-6/348457766_255967780341897_7711453716991005940_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_ohc=XSktaJ9iAvIQ7kNvgEXCv61&_nc_ht=scontent.fosu2-2.fna&oh=00_AYCzSvtwIRlgPrAcWEIQpc-8Bn5Tuao77uwPrfzxzid3og&oe=669A5285" alt="Tile Floor Banner" />
       {/* Blurb and Contact form */}

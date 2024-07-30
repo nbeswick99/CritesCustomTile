@@ -1,8 +1,13 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
+//image imports
+import HeroImage from '../assets/images/general/HeroImage.jpg'
+
 //Component import
 import ContactForm from '../components/ContactForm';
+import Navbar from '../components/Navbar.jsx'
+import Header from '../components/Header.jsx'
 //css import 
 import '../css/Home.css'
 import'../css/Service.css'
@@ -11,6 +16,10 @@ const Home = () => {
 
   return (
     <div>
+      <div className='bigheader'>
+          <Header />
+          <Navbar />
+        </div>
       {/* Div with hero image and contact form */}
       <div className='hero-container'>
         <div className='hero-text-container'>
@@ -22,7 +31,7 @@ const Home = () => {
 
       {/* Backsplash */}
       <div className='service-container'>
-        <img className='service-img'src="https://scontent.fosu2-2.fna.fbcdn.net/v/t39.30808-6/272822277_146608291059551_8616228285632207538_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=3a1ebe&_nc_ohc=8eZS4jTcF-sQ7kNvgG01Rr2&_nc_ht=scontent.fosu2-2.fna&oh=00_AYBA0rJoB__eDubEu0BveTqwOwzD9mTXXzjF3SFe2Mg2SQ&oe=669A474A" alt="Backsplash" />
+        <img className='service-img'src={HeroImage} alt="Backsplash" />
         <div className='service-text-container'>
           <div className='service-header'>
             <h3 className='service-text'>Backsplash</h3>

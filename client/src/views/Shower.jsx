@@ -1,5 +1,7 @@
 import React from 'react'
 //Component imports
+import Navbar from '../components/Navbar.jsx'
+import Header from '../components/Header.jsx'
 import ContactForm from '../components/ContactForm'
 //css imports
 import '../css/Service.css'
@@ -7,6 +9,10 @@ import '../css/Service.css'
 const Shower = () => {
   return (
     <div>
+      <div className='bigheader'>
+        <Header />
+        <Navbar />
+      </div>
       {/* Banner image */}
       <img className='banner' id='shower-banner' src="https://scontent.fosu2-1.fna.fbcdn.net/v/t39.30808-6/348430705_310901787940079_3405793847406322326_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=smoh_dt53QEQ7kNvgGG7duz&_nc_ht=scontent.fosu2-1.fna&oh=00_AYABUEUku5-aQ1grX1AEDuZYlijVe6j09Z6nr7-i7EFtEg&oe=669A5831" alt="Backsplash" />
       {/* Blurb and Contact form */}

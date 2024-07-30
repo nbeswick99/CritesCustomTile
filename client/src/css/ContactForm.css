@@ -22,5 +22,6 @@
 
 .number-container{
   display:flex;
-  gap:.5em;
+  gap: .1em;
+  white-space: nowrap;
 }
