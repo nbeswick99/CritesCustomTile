@@ -6,6 +6,7 @@ import {useNavigate} from 'react-router-dom'
 import '../css/ContactForm.css'
 
 const ContactForm = () => {
+  const [createErr, setCreateErr] = useState();
   const [contact, setContact] = useState({
     firstName: "", 
     lastName: "",
@@ -41,9 +42,9 @@ const ContactForm = () => {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    const newContact = contact
-    newContact.number = "+1812" + contact.number
-    axios.post("http://localhost:8000/api/listings", newContact)
+    const newContact = contact;
+    newContact.number = "1812" + newContact.number.replace(/[^\d]/g, '');
+    axios.post("http://localhost:8000/api/clients", newContact)
     .then((res) => {
       console.log(res.data)
       setContact({
@@ -57,6 +58,7 @@ const ContactForm = () => {
     .catch((err) => {
       {
         setCreateErr(err.response.data.errors)
+        console.log(createErr)
       }
     })
   }
@@ -83,6 +85,9 @@ const ContactForm = () => {
             <span>+1 (812) </span>
             <input placeholder=' ###-####'type="text" id="number" name="number" value={contact.number} onChange ={e => changeHandler(e)}/>
           </div>
+        </div>
+        <div className='input-container'>
+          <input type="submit" className ='submit-button'/>
         </div>
       </form>
     </div>

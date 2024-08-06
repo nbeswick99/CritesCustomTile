@@ -4,14 +4,15 @@ import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import dbConnect from './config/mongoose.config.js';
-import router from './routes/clients.routes.js';
-
+import clientRouter from './routes/clients.routes.js';
+import loginRouter from './routes/logins.routes.js';
 
 const app = express();
 
 //MIDDLEWARE
 app.use(express.json(), cors());
-app.use('/api', router)
+app.use('/api', clientRouter);
+app.use('/api', loginRouter);
 
 //ACCESS THE ENV VARIABLES
 dotenv.config();

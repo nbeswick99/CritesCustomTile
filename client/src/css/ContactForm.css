@@ -25,3 +25,16 @@
   gap: .1em;
   white-space: nowrap;
 }
+.submit-button{
+    background-color:#4D7C8A;
+    transition: 100ms;
+    border-radius: .5em;
+    border: none;
+    font-size: 1.5em;
+    padding: .25em;
+}
+.submit-button:hover{
+    background-color: #3c6470;
+    transition: 100ms;
+}
+
