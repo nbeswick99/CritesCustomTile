@@ -3,6 +3,7 @@
     justify-content: space-between;
     padding: .75em;
     background-color: #ff7f11;
+    margin-bottom: 1em;
 }
 .logout-button{
     background-color:#4D7C8A;
@@ -27,8 +28,8 @@
 
     padding:.75em;
     border: 2px solid black;
-    margin-top: 1em;
     width: 20vw;
+    max-height: 10vh;
 }
 .contacts {
     display: flex;
