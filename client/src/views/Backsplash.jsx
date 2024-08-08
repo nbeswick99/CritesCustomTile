@@ -12,8 +12,8 @@ import backSplashHero from'../assets/images/general/backSplashHero.jpg'
 import allImages from '../assets/images/index.js'
 const Backsplash = () => {
   const {backsplashImgs} = allImages
-  return (
-    <div>
+  return ( 
+    <div className='service-wrapper'>
       <div className='bigheader'>
         <Header />
         <Navbar />
@@ -34,14 +34,21 @@ const Backsplash = () => {
         <ContactForm/>
       </div>
       {/* Gallery Images */}
-      <ol>
-        {backsplashImgs.map( (eachImg, IDX) => {
-          return (
-          <li>
-            <img className="gallery-item" id={`backsplash${IDX}`} src={eachImg} alt="" />
-          </li>
-          )})};
-      </ol>
+      <h2 className='gallery-text'>Gallery</h2>
+      <div className='gallery-container'>
+        <div classname='gallery-row'>
+          <img className='gallery-item' id="backsplash0" src={backsplashImgs[0]} alt="" />
+          <img className='gallery-item' id="backsplash1" src={backsplashImgs[1]} alt="" />
+          <img className='gallery-item' id="backsplash2" src={backsplashImgs[2]} alt="" />
+          <img className='gallery-item' id="backsplash3" src={backsplashImgs[3]} alt="" />
+        </div>
+        <div classname='gallery-row'>
+          <img className='gallery-item' id="backsplash4" src={backsplashImgs[4]} alt="" />
+          <img className='gallery-item' id="backsplash5" src={backsplashImgs[5]} alt="" />
+          <img className='gallery-item' id="backsplash6" src={backsplashImgs[6]} alt="" />
+          <img className='gallery-item' id="backsplash7" src={backsplashImgs[7]} alt="" />
+        </div>
+      </div>
     </div>
   )
 }

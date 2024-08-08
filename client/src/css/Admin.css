@@ -17,6 +17,32 @@
     background-color: #3c6470;
     transition: 100ms;
 }
+
+.login-container {
+    display: flex;
+    justify-content: center;
+}
+.form-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.input-container{
+    display: flex;
+    justify-content: space-between;
+}
+.login-button {
+    background-color:#4D7C8A;
+    transition: 100ms;
+    border-radius: .5em;
+    border: none;
+    font-size: 1.5em;
+    padding: .25em;
+}
+.login-button:hover{
+    background-color: #ff7f11;
+    transition: 100ms;
+}
 .admin-body{
     display: flex;
     justify-content: space-around;   

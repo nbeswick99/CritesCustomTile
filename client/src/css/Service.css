@@ -1,3 +1,8 @@
+.service-wrapper{
+  display:flex; 
+  flex-direction: column;
+}
+
 .service-container{
   display: flex;
   justify-content: space-around;
@@ -37,27 +42,41 @@ p.service-text{
   object-fit:cover;
   margin-bottom: 10px;
 }
-.image-gallery-container {
-  Display: flex;
-  max-width: 100%;
-  overflow: hidden;
+.gallery-text{
+  color:#4D7C8A;
+  font-size: 3em;
+  text-align: center;
+  padding: .5em;
+}
+.gallery-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+}
+
+.gallery-row {
+  display: flex; 
+  justify-content: center;
 }
 
 .gallery-item{
-  max-width: 20vw;
-  object-fit:cover;
+  width: 20vw;
+  height: 70vh;
+  object-fit: cover;
+  object-position: center;
 }
 
-@media screen and (max-width: 768px) {
-  .image-gallery-container {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  }
-}
+/* Backsplash  page */ 
 
 /* Shower page*/
 #shower-banner {
   object-position: 50% 20%;
 }
+/* TileFloorPage */
 #tile-floor-banner{
-  object-position: 50% 35%
+  object-position: 50% 35%;
 }
+#tileFloor0{
+  object-position: 50% 20%;
+} 

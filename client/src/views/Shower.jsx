@@ -5,8 +5,11 @@ import Header from '../components/Header.jsx'
 import ContactForm from '../components/ContactForm'
 //css imports
 import '../css/Service.css'
+//image imports
+import allImages from '../assets/images/index.js'
 
 const Shower = () => {
+  const {generalImgs, showerImgs} = allImages
   return (
     <div>
       <div className='bigheader'>
@@ -14,7 +17,7 @@ const Shower = () => {
         <Navbar />
       </div>
       {/* Banner image */}
-      <img className='banner' id='shower-banner' src="https://scontent.fosu2-1.fna.fbcdn.net/v/t39.30808-6/348430705_310901787940079_3405793847406322326_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=smoh_dt53QEQ7kNvgGG7duz&_nc_ht=scontent.fosu2-1.fna&oh=00_AYABUEUku5-aQ1grX1AEDuZYlijVe6j09Z6nr7-i7EFtEg&oe=669A5831" alt="Backsplash" />
+      <img className='banner' id='shower-banner' src={generalImgs[2]} alt="Backsplash" />
       {/* Blurb and Contact form */}
       <div className='service-container'>
         <div className='service-text-container'>
@@ -28,10 +31,20 @@ const Shower = () => {
         <ContactForm/>
       </div>
       {/* Gallery Images */}
-      <div className='image-gallery-container'>
-        <img className='gallery-item' src="https://scontent.fosu2-1.fna.fbcdn.net/v/t39.30808-6/288761646_174665798253800_6400174334444935491_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=3a1ebe&_nc_ohc=ZFnA8rnrfOUQ7kNvgHJN7xD&_nc_ht=scontent.fosu2-1.fna&oh=00_AYBtRW5-z9kcTtuuJD2zyWCVfBiluGXcTUs7I5CNhe17_A&oe=669A2F01" alt="" />
-        <img className='gallery-item' src="https://scontent.fosu2-1.fna.fbcdn.net/v/t39.30808-6/275125846_152919833761730_7744277862122368930_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=3a1ebe&_nc_ohc=5Y_Z82z8txsQ7kNvgF9OrlF&_nc_ht=scontent.fosu2-1.fna&oh=00_AYBaV6YwaEVCo19Jb5-LQuBVZnfw6LMHrPuc61T0O7aEdw&oe=669A3876" alt="" />
-        <img className='gallery-item' src="https://scontent.fosu2-1.fna.fbcdn.net/v/t39.30808-6/273149164_146700544383659_1020882095174248639_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=3a1ebe&_nc_ohc=WkSByTKJ9goQ7kNvgHTV2Si&_nc_ht=scontent.fosu2-1.fna&oh=00_AYBrQmSp75mpZwjBJmtNQ7mdJi1T-DL5Tl5hDokF8Il2ZQ&oe=669A5A19" alt="" />
+      <h2 className='gallery-text'>Gallery</h2>
+      <div className='gallery-container'>
+        <div classname='gallery-row'>
+          <img className='gallery-item' id="shower0" src={showerImgs[0]} alt="" />
+          <img className='gallery-item' id="shower1" src={showerImgs[1]} alt="" />
+          <img className='gallery-item' id="shower2" src={showerImgs[2]} alt="" />
+          <img className='gallery-item' id="shower3" src={showerImgs[3]} alt="" />
+        </div>
+        <div classname='gallery-row'>
+          <img className='gallery-item' id="shower4" src={showerImgs[4]} alt="" />
+          <img className='gallery-item' id="shower5" src={showerImgs[5]} alt="" />
+          <img className='gallery-item' id="shower6" src={showerImgs[6]} alt="" />
+          <img className='gallery-item' id="shower7" src={showerImgs[9]} alt="" />
+        </div>
       </div>
     </div>
   )

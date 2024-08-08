@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 //image imports
-import HeroImage from '../assets/images/general/HeroImage.jpg'
+import allImages from '../assets/images/index.js'
 
 //Component import
 import ContactForm from '../components/ContactForm';
@@ -12,8 +12,8 @@ import Header from '../components/Header.jsx'
 import '../css/Home.css'
 import'../css/Service.css'
 const Home = () => {
+  const {generalImgs} = allImages
   const Navigate = useNavigate();
-
   return (
     <div>
       <div className='bigheader'>
@@ -31,7 +31,7 @@ const Home = () => {
 
       {/* Backsplash */}
       <div className='service-container'>
-        <img className='service-img'src={HeroImage} alt="Backsplash" />
+        <img className='service-img'src={generalImgs[1]} alt="Backsplash" />
         <div className='service-text-container'>
           <div className='service-header'>
             <h3 className='service-text'>Backsplash</h3>
@@ -59,12 +59,12 @@ const Home = () => {
           A tile shower provides a beautiful and long lasting addition to your bathroom.
           </p>
         </div>
-        <img className='service-img'src="https://scontent.fosu2-1.fna.fbcdn.net/v/t39.30808-6/283068566_169667528753627_5469039556488893619_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=3a1ebe&_nc_ohc=4T3MetkzxDEQ7kNvgHt0vrV&_nc_ht=scontent.fosu2-1.fna&oh=00_AYD-aWGGO1Iwd2mngJjcC9s-fZ9KG2f2N8oLkvYJRbktGQ&oe=669A56A2" alt="Backsplash" />
+        <img className='service-img'src={generalImgs[2]} alt="Backsplash" />
       </div>
 
       {/* Tile Floor */}
       <div className='service-container'>
-        <img className='service-img'src="https://scontent.fosu2-1.fna.fbcdn.net/v/t39.30808-6/310621091_196553146078028_3544292977359623872_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=ShRVFMPKln0Q7kNvgG9JWLO&_nc_ht=scontent.fosu2-1.fna&oh=00_AYBab8bwm0UaaZs04efLyJtHuEwlCcUGiw9vXljRn2Sl4Q&oe=669A35D5" alt="Backsplash" />
+        <img className='service-img'src={generalImgs[3]} alt="Backsplash" />
         <div className='service-text-container'>
           <div className='service-header'>
             <h3 className='service-text'>Tile Floor</h3>
@@ -80,7 +80,7 @@ const Home = () => {
       </div>
 
       {/* VinylPlank */}
-      <div className='service-container'>
+      {/* <div className='service-container'>
         <div className='service-text-container'>
           <div className='service-header'>
             <h3 className='service-text'>Vinyl Plank Floor</h3>
@@ -97,7 +97,7 @@ const Home = () => {
         <img className='service-img'src="https://scontent.fosu2-1.fna.fbcdn.net/v/t39.30808-6/283068566_169667528753627_5469039556488893619_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=3a1ebe&_nc_ohc=4T3MetkzxDEQ7kNvgHt0vrV&_nc_ht=scontent.fosu2-1.fna&oh=00_AYD-aWGGO1Iwd2mngJjcC9s-fZ9KG2f2N8oLkvYJRbktGQ&oe=669A56A2" alt="Backsplash" />
       </div>
 
-      {/* Hardwood flooring */}
+      Hardwood flooring
       <div className='service-container'>
         <img className='service-img'src="https://scontent.fosu2-1.fna.fbcdn.net/v/t39.30808-6/310621091_196553146078028_3544292977359623872_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=ShRVFMPKln0Q7kNvgG9JWLO&_nc_ht=scontent.fosu2-1.fna&oh=00_AYBab8bwm0UaaZs04efLyJtHuEwlCcUGiw9vXljRn2Sl4Q&oe=669A35D5" alt="Backsplash" />
         <div className='service-text-container'>
@@ -112,7 +112,7 @@ const Home = () => {
             Whether you prefer the rustic allure of wide planks or the refined look of glossy finishes, hardwood floors elevate the ambiance of a room while increasing the value of your home.
           </p>
         </div>
-      </div>
+      </div> */}
     </div>
   )
 }

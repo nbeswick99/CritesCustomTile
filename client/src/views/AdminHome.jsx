@@ -4,7 +4,7 @@ import { useNavigate} from "react-router-dom"
 //Components
 import ContactCard from "../components/ContactCard"
 //css import
-import '../css/AdminHome.css' 
+import '../css/Admin.css' 
 
 const AdminHome = () => {
     //state variables

@@ -2,6 +2,7 @@
 import heroImage from './general/HeroImage.jpg'
 import backSplashHero from './general/backSplashHero.jpg'
 import showerHero from './general/showerHero.jpg'
+import tileFloorHero from './general/tileFloorHero.jpg'
 //Backsplash imports 
 import backSplash1 from './backsplash/backsplash1.jpg'
 import backSplash2 from './backsplash/backsplash2.jpg'
@@ -42,8 +43,9 @@ const allImages = {
     generalImgs: [
         heroImage,
         backSplashHero,
-        showerHero
-        ],
+        showerHero,
+        tileFloorHero
+    ],
     // Backsplash Images
     backsplashImgs: [
         backSplash1,

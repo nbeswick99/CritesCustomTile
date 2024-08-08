@@ -15,8 +15,8 @@ const Navbar = () => {
           <Link to={"/Backsplash"}>Backsplash</Link>
           <Link to={"/Shower"}>Shower</Link>
           <Link to={"/TileFloor"}>Tile Floor</Link>
-          <Link to={"/HardwoodFloor"}>Hardwood Floor</Link>
-          <Link to={"/VinylPlank"}>Vinyl Plank Floor</Link>
+          {/* <Link to={"/HardwoodFloor"}>Hardwood Floor</Link>
+          <Link to={"/VinylPlank"}>Vinyl Plank Floor</Link> */}
         </div>
       </div>
       <Link to={"/Contact"}>Contact</Link>
