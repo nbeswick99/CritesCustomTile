@@ -10,7 +10,7 @@ import TileFloor from './views/TileFloor.jsx'
 // import HardwoodFloor from './views/HardwoodFloor.jsx'
 
 //Admin View imports 
-import AdminLogin from './views/AdminLogin.jsx'
+import Admin from './views/Admin.jsx'
 import AdminHome from './views/AdminHome.jsx'
 
 
@@ -28,7 +28,7 @@ function App() {
           {/* <Route path='/HardwoodFloor' element={<HardwoodFloor/>}/> */}
 
           {/* Admin Routes */}
-          <Route path='/admin' element ={<AdminLogin/>}/>
+          <Route path='/admin' element ={<Admin/>}/>
           <Route path='/admin/home' element={<AdminHome/>}/>
         </Routes>
     </main>

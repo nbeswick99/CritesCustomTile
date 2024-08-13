@@ -1,6 +1,6 @@
 import {model, Schema} from 'mongoose';
 
-const LoginSchema = new Schema(
+const UserSchema = new Schema(
     {
         username: {
             type: String, 
@@ -10,7 +10,7 @@ const LoginSchema = new Schema(
             type: String, 
             required: [true, "Password is required!"],
         },
-        firstName: {
+        name: {
             type: String,
             required: [true, "firstname is required!"]
         }
@@ -18,5 +18,5 @@ const LoginSchema = new Schema(
     {timestamps: true}
 );
 
-const Login = model("Login", LoginSchema)
-export default Login;
+const User = model("Login", LoginSchema)
+export default User;
