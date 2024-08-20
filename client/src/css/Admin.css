@@ -20,7 +20,13 @@
 
 .login-container {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.register-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .form-container{
     display: flex;
@@ -43,7 +49,19 @@
     background-color: #ff7f11;
     transition: 100ms;
 }
-.admin-body{
+.register-button {
+    background-color:#4D7C8A;
+    transition: 100ms;
+    border-radius: .5em;
+    border: none;
+    font-size: 1.5em;
+    padding: .25em;
+}
+.register-button:hover{
+    background-color: #ff7f11;
+    transition: 100ms;
+}
+.admin-container{
     display: flex;
     justify-content: space-around;   
 }   

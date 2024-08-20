@@ -13,6 +13,7 @@ const AdminLogin = () => {
         password: "",
     });
     const [loginErr, setLoginErr] = useState();
+    const [failMessage, setFailMessage] = useState();
 
     const Navigate = useNavigate();
 
@@ -31,18 +32,23 @@ const AdminLogin = () => {
             username:"",
             password:"",
         });
+        if (res.data === "Sucess") {
           Navigate("/admin/home");
+          } else {
+            setFailMessage(res.data);
+          }
         })
         .catch((err) => {
           {
             setLoginErr(err.response.data.errors)
-            console.log(createErr)
+            console.log(createError)
           }
         })
       }
 
     return (
         <div className="login-container">
+          <h1>Login</h1>
             <form onSubmit={(e) => submitHandler(e)} className="form-container">
                 <div className="input-container">
                     <label htmlFor="username"> Username: </label>
@@ -52,6 +58,7 @@ const AdminLogin = () => {
                     <label htmlFor="password">Password: </label>
                     <input type="text" name="password" value={login.password}onChange={(e) => changeHandler(e)} autoComplete="off"/>
                 </div>
+                {failMessage?<span>{failMessage}</span>:null}
                 <button type="submit" className="login-button">Login</button>
             </form>
         </div>

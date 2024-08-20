@@ -8,8 +8,23 @@ import '../css/Admin.css'
 
 const AdminHome = () => {
     //state variables
-    const [contacts, setContacts] = useState();
-    const [deleteClient, setDeleteClient] = useState(false);
+    const [contacts, setContacts] = useState([
+      {
+        _id: 1,
+        firstName: "John",
+        lastName: "Doe",
+        email: "example@email.com",
+        number: "18121234567"
+      },
+      {
+        _id: 2,
+        firstName: "Jane",
+        lastName: "Doe",
+        email: "example@email.com",
+        number: "18121234567"
+      }
+    ]);
+    const [deleteClient, setDeleteClient] = useState();
 
     //make useNavigate easier to use 
     const navigate = useNavigate();
@@ -21,7 +36,7 @@ const AdminHome = () => {
         axios.delete(`http://localHost:8000/api/clients/${_id}`)
         .then(res => {
           console.log(res.data)
-          setDeleteClient(true);
+          setDeleteClient(res.data);
         })
         .catch(err => console.log(err))
       })
@@ -33,9 +48,6 @@ const AdminHome = () => {
             .then((res) => {
               setContacts(res.data);
               console.log(res.data);
-              if (deleteClient == true) {
-                setDeleteClient(false);
-              }
             })
             .catch((err) => {
                 console.log(err); 
@@ -48,7 +60,7 @@ const AdminHome = () => {
                 <h1>CritesCustomTile</h1>
                 <button className='logout-button'>Logout</button>
             </div>
-            <div className='admin-body'>
+            <div className='admin-container'>
                 <div className='admin-nav'>
                     <p>Home</p>
                 </div>

@@ -8,6 +8,7 @@ const ContactCard = (props) => {
 
     const formatPhone = (number) => {
         let phone = number
+        console.log(phone)
         return `+${phone.slice(0, 1)} (${phone.slice(1,4)}) ${phone.slice(4,7)} - ${phone.slice(7, phone.length)}`
     }
 
