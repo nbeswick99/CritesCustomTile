@@ -1,5 +1,6 @@
 import './App.css'
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, Navigate } from 'react-router-dom'
+import { useJwsContext } from './hooks/useJwsContext.jsx'
 
 // Client View imports
 import Home from './views/Home.jsx'
@@ -14,7 +15,9 @@ import Admin from './views/Admin.jsx'
 import AdminHome from './views/AdminHome.jsx'
 
 
+
 function App() {
+  const {user} = useJwsContext();
 
   return (
     <main>
@@ -29,7 +32,7 @@ function App() {
 
           {/* Admin Routes */}
           <Route path='/admin' element ={<Admin/>}/>
-          <Route path='/admin/home' element={<AdminHome/>}/>
+          <Route path='/admin/home' element={user? <AdminHome/>: <Navigate to="/admin"/>}/>
         </Routes>
     </main>
   )

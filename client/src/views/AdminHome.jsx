@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from "react"
 import axios from "axios"
 import { useNavigate} from "react-router-dom"
+import { useLogout } from "../hooks/useLogout"
+import { useJwsContext } from "../hooks/useJwsContext"
 //Components
 import ContactCard from "../components/ContactCard"
 //css import
@@ -8,6 +10,7 @@ import '../css/Admin.css'
 
 const AdminHome = () => {
     //state variables
+    const {user } = useJwsContext();
     const [contacts, setContacts] = useState([
       {
         _id: 1,
@@ -24,7 +27,8 @@ const AdminHome = () => {
         number: "18121234567"
       }
     ]);
-    const [deleteClient, setDeleteClient] = useState();
+    const [deleteClient, setDeleteClient] = useState(null);
+    const {logout} = useLogout();
 
     //make useNavigate easier to use 
     const navigate = useNavigate();
@@ -44,7 +48,12 @@ const AdminHome = () => {
     // deleteClient serves to cause this to reload, getting updated
     // contact list 
     useEffect(()=>{
-        axios.get("http://localhost:8000/api/clients")
+      if (user) {
+        axios.get("http://localhost:8000/api/clients", {
+          headers: {
+            'Authorization': `Bearer ${user.token}`
+          }
+        })
             .then((res) => {
               setContacts(res.data);
               console.log(res.data);
@@ -52,13 +61,18 @@ const AdminHome = () => {
             .catch((err) => {
                 console.log(err); 
             })
-      }, [deleteClient])
+      }
+      }, [deleteClient, user])
+
+      const logoutHandler = () => {
+        logout();
+      }
 
     return (
        <div>
             <div className='admin-header'>
                 <h1>CritesCustomTile</h1>
-                <button className='logout-button'>Logout</button>
+                <button className='logout-button' onClick={logoutHandler}>Logout</button>
             </div>
             <div className='admin-container'>
                 <div className='admin-nav'>

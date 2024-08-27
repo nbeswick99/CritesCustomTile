@@ -2,12 +2,13 @@ import React from "react";
 import {useState} from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import { useSignup } from "../hooks/useSignup";
 
 //CSS imports
 import '../css/Admin.css'
 
 const AdminRegister = (props) => {
-    
+    const {signup, error, isLoading} = useSignup();
     const [register, setRegister] = useState({
         name: "",
         username: "",
@@ -25,17 +26,9 @@ const AdminRegister = (props) => {
                 username: register.username,
                 password: register.password
             }
-            axios.post("http://localhost:8000/api/register", newUser)
-            .then((res) => {
-                console.log(res.data)
-                navigate("/admin/home")
-            })
-            .catch((err) => {
-                {
-                    setLoginErr(err.response.data.errors)
-                    console.log(createErr)
-                }
-            })
+            signup(newUser)
+
+            navigate("/amdin/home")
         }
     }
     const changeHandler = (e) => {
@@ -64,7 +57,8 @@ const AdminRegister = (props) => {
                     <label htmlFor="confirmPassword">Confirm Password:</label>
                     <input type="password" name="confirmPassword" onChange={(e) => changeHandler(e)} value={register.confirmPassword} autoComplete="off"/>
                 </div>
-                <button type="submit" className="register-button">Register</button>
+                <button type="submit" disabled={isLoading}className="register-button">Register</button>
+                {error && <div className="error">{error}</div>}
             </form>
         </div>
     )

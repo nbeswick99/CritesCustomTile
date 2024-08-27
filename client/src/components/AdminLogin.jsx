@@ -1,7 +1,8 @@
 import React from "react";
 import {useState} from "react"
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
+import { useLogin } from "../hooks/useLogin";
+
 
 //css import
 import '../css/Admin.css'
@@ -14,6 +15,7 @@ const AdminLogin = () => {
     });
     const [loginErr, setLoginErr] = useState();
     const [failMessage, setFailMessage] = useState();
+    const {useLogin, error, isLoading} = useLogin();
 
     const Navigate = useNavigate();
 
@@ -25,25 +27,7 @@ const AdminLogin = () => {
     
     const submitHandler = (e) => {
         e.preventDefault();
-        axios.post("http://localhost:8000/api/login", login)
-        .then((res) => {
-        console.log(res.data)
-        setLogin({
-            username:"",
-            password:"",
-        });
-        if (res.data === "Sucess") {
-          Navigate("/admin/home");
-          } else {
-            setFailMessage(res.data);
-          }
-        })
-        .catch((err) => {
-          {
-            setLoginErr(err.response.data.errors)
-            console.log(createError)
-          }
-        })
+        useLogin(login)
       }
 
     return (
@@ -59,7 +43,8 @@ const AdminLogin = () => {
                     <input type="text" name="password" value={login.password}onChange={(e) => changeHandler(e)} autoComplete="off"/>
                 </div>
                 {failMessage?<span>{failMessage}</span>:null}
-                <button type="submit" className="login-button">Login</button>
+                <button type="submit" disabled={isLoading} className="login-button">Login</button>
+                {error&& <div className="error">{error}</div>}
             </form>
         </div>
     )
