@@ -17,8 +17,12 @@ import AdminHome from './views/AdminHome.jsx'
 
 
 function App() {
+  console.log("Hello form App")
+
   const {user} = useJwsContext();
 
+  
+  
   return (
     <main>
         <Routes>

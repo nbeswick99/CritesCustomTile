@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react"
 import axios from "axios"
 import { useNavigate} from "react-router-dom"
 import { useLogout } from "../hooks/useLogout"
-import { useJwsContext } from "../hooks/useJwsContext"
+import { useJwsContext } from "../hooks/useJwsContext.jsx"
 //Components
 import ContactCard from "../components/ContactCard"
 //css import

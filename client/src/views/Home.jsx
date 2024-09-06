@@ -8,6 +8,7 @@ import allImages from '../assets/images/index.js'
 import ContactForm from '../components/ContactForm';
 import Navbar from '../components/Navbar.jsx'
 import Header from '../components/Header.jsx'
+import Footer from '../components/Footer.jsx';
 //css import 
 import '../css/Home.css'
 import'../css/Service.css'
@@ -113,6 +114,7 @@ const Home = () => {
           </p>
         </div>
       </div> */}
+      <Footer />
     </div>
   )
 }
