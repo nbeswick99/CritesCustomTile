@@ -48,7 +48,7 @@ const Home = () => {
       </div>
 
       {/* Shower */}
-      <div className='service-container'>
+      <div className='service-container' id='shower'>
         <div className='service-text-container'>
           <div className='service-header'>
             <h3 className='service-text'>Shower</h3>
@@ -64,7 +64,7 @@ const Home = () => {
       </div>
 
       {/* Tile Floor */}
-      <div className='service-container'>
+      <div className='service-container' >
         <img className='service-img'src={generalImgs[3]} alt="Backsplash" />
         <div className='service-text-container'>
           <div className='service-header'>

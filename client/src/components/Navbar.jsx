@@ -19,7 +19,7 @@ const Navbar = () => {
           <Link to={"/VinylPlank"}>Vinyl Plank Floor</Link> */}
         </div>
       </div>
-      <Link to={"/Contact"}>Contact</Link>
+      {/* <Link to={"/Contact"}>Contact</Link> */}
     </div>
   )
 };

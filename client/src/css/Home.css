@@ -1,6 +1,6 @@
 .hero-container{
   background-image: url(../assets/images/general/HeroImage.jpg);
-  background-size: 100%;;
+  background-size: 100%;
   background-repeat: no-repeat;
   background-position: center;
   background-color: #4D7C8A;
@@ -43,4 +43,12 @@ p.hero-text{
 .learn-more:hover{
   background-color: #ff7f11;
   transition: 100ms;
+}
+
+@media only screen and (max-width: 700px) {
+  .hero-container{
+    flex-direction: column;
+    padding-bottom: 1em;
+  }
+  
 }

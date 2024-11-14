@@ -21,7 +21,7 @@ const Backsplash = () => {
       {/* Banner image */}
       <img className='banner' src={backSplashHero} alt="Backsplash" />
       {/* Blurb and Contact form */}
-      <div className='service-container'>
+      <div className='service-container' id='service-page'>
         <div className='service-text-container'>
           <h2 className='service-text'>Backsplash</h2>
           <p className='service-text'>

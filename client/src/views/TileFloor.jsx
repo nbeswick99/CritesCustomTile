@@ -17,7 +17,7 @@ const TileFloor = () => {
       {/* Banner image */}
       <img className='banner' id='tile-floor-banner'src={generalImgs[3]} alt="Tile Floor Banner" />
       {/* Blurb and Contact form */}
-      <div className='service-container'>
+      <div className='service-container' id='service-page'>
         <div className='service-text-container'>
           <h2 className='service-text'>Tile Floor</h2>
           <p className='service-text'>

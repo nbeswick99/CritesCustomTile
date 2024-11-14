@@ -14,7 +14,7 @@ const Header = () => {
           <h3>Phone Number</h3>
           <p>1 (812) 521-0891 </p>
         </div>
-        <button className='contact' onClick={() => Navigate("/Contact")}>Contact</button>
+        {/* <button className='contact' onClick={() => Navigate("/Contact")}>Contact</button> */}
       </div>
     </div>
   )

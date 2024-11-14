@@ -19,13 +19,14 @@ const Shower = () => {
       {/* Banner image */}
       <img className='banner' id='shower-banner' src={generalImgs[2]} alt="Backsplash" />
       {/* Blurb and Contact form */}
-      <div className='service-container'>
+      <div className='service-container' id='service-page'>
         <div className='service-text-container'>
           <h2 className='service-text'>Shower</h2>
           <p className='service-text'>
           If you want a little bit of luxury in your bathroom, a tile shower is a great option to choose. With many colors, styles, and textures, there is a tile shower that you are sure to love. 
           Along with being elegant, tiles are durable and moisture resistant maintaining that elegance over time. 
-          A tile shower provides a beautiful and long lasting addition to your bathroom.
+          Tile showers can also be made with custom niches and benches to perfectly fit your needs.
+          A tile shower provides a beautiful and long lasting addition to your bathroom. 
           </p>
         </div>
         <ContactForm/>

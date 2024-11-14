@@ -67,6 +67,27 @@ p.service-text{
   object-position: center;
 }
 
+@media only screen and (max-width: 700px) {
+  .service-container{
+    flex-direction: column-reverse;
+    padding: 0;
+  }
+  #shower {
+    flex-direction:column;
+  }
+  .service-img{
+    max-width: 80vw;
+    max-height: 80vh;
+    background-color:#4D7C8A ;
+  }
+  .service-text-container{
+    max-width: 80vw;
+  }
+  #service-page{
+    flex-direction: column;
+  }
+}
+
 /* Backsplash  page */ 
 
 /* Shower page*/
